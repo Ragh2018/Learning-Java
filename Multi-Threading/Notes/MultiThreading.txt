@@ -1,0 +1,22 @@
+   Lecture 1.(App1 to App3)
+		Now there are two basic ways of starting a thread in Java and thread is just kind of like a separate operating system process which can run concurrently with other threads.
+		Below are the ways from which we can use thread
+		1. Extend thread class and override run method.
+		2. Implement Runnable interface and pass it to constructor of thread class.
+		
+		Thread.sleep() throws an interuppted exception so always put it into try/catch block.
+		
+	Lecture 2.(App4)
+		Now if multiple thread is sharing the same variable and you want to stop execution of one of the thread but the boolean variable you used for stopping the thread is also used by the another thread. So if you make it false it might  be possible that another thread also stop from this due to some caching. So to remove this error we are using the volatile(mostly used when variable is cached) keyword which gurantees that it will work fine.
+	
+	Lecture 3.(App5)
+		Suppose we have count vaiable which got incremented by two of the thread it might be possible that some time that both thread access the same count value and assign same new count value to count(count=count+1). Which cause the problem. And this can be handled by the syncronized keyword that means at a time when any thread access any variable and it is syncronized then no other thread can modify it's value.
+		
+		Bascially in Java every object has what we call an intrinsic lock or a monitor lock(mutex). And if you have if you call a synchronized method of an object.You have to acquire the intrinsic lock before you can call.And the thing is that only one thread can acquire the intrinsic lock at a time and if one thread acquires
+		the intrinsic lock that runs this method and if another thread at the same time tries to call this method then the second thread will just have to wait.It will just quietly wait until the first thread releases the intrinsic lock by the method finishing.
+		
+	Lecture 4.(Worked)
+		For better understanding go to project.
+		
+		
+		

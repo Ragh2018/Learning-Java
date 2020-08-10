@@ -21,7 +21,11 @@
 	Lecture 5. (App6) (Thread Pool)
 		For creating multiple thread we are using thread pool. Thread pool can be created Using Executors service which have static method newFixedThreadPool(). Suppose you have 5 tasks and thread pool of size 2 is created. So at a time using submit method of the executor service all the tasks are putted in thread pool and then processing of work started. We can even terminate the tasks after some time if tasks not completed
 	
+	Lecture 6. (App7) (Countdown Latch)
+			CountDownLatch is used to make sure that a task waits for other threads before it starts. To understand its application, let us consider a server where the main task can only start when all the required services have started.
 	
-		
-		
+	Lecture 7. (App8) (Producer Consumer)
+		We used BlockingQueue interface to perform the consumer and producer of size 10. So in queue at a time max 10 data can be present if it is already 10 then producer have to wait for data to be consumed. As this is thread safe class we are using then there is no need to use synchronized keyword.Same apply for consumer also.
+	
+	Lecture 8.
 		
